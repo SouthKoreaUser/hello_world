@@ -26,19 +26,25 @@ public static void main(String[] args) {
 	
 	int score;
 	Member m1 = new Member(); //인스턴스 생성
-	m1.name = "홍길동";
+//	m1.name = "홍길동";
+	m1.setName("홍길동"); // setter.
 	System.out.println(m1.score);
 	Member m2 = new Member(); //인스턴스 생성
-	m2.name = "최민수";
+//	m2.name = "최민수";
+	m2.setName("최민수"); // setter.
 	Member m3 = new Member(); //인스턴스 생성
-	m3.name = "김병수";
+//	m3.name = "김병수";
+	m3.setName("김병수"); // setter.
 	Member m4 = new Member(); //인스턴스 생성
-	m4.name = "박인만";
+//	m4.name = "박인만";
+	m4.setName("박인만"); // setter.
 	//배열.
 	Member[] members = {m1, m2, m3, m4};
 	//70 ~ 100 사이의 임의값으로 점수지정.
 	for (int i = 0; i < members.length; i++) {
-		members[i].score = (int) (Math.random() * 31) + 70;
+//		members[i].score = (int) (Math.random() * 31) + 70;
+		score = (int) (Math.random() * 31) + 70;
+		members[i].setScore(score);
 	}
 	//점수가 가장 높은 사람의 이름.
 //	int max = members[0].score;
@@ -57,8 +63,8 @@ public static void main(String[] args) {
 	// for 반복문 활용.
 	// 비교시 30 == 30, members[i].name.equals(search)
 	for(int i = 0; i < members.length; i++) {
-	if(members[i].name.equals(search)) {
-		System.out.println("학생점수>>" + members[i].score);
+	if(members[i].getName().equals(search)) {
+		System.out.println("학생점수>>" + members[i].getScore());
 		}
 	}
 }
