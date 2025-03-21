@@ -10,8 +10,10 @@ public class Book {
 		private String company;
 		private int price;
 		private int orderNo; // 도서가 입력될 때마다 값을 할당(정렬하기 위함)
+		private String bookCode;
 		
 		// 생성자. (매개값으로 필드의 변수값을 받음)
+		
 		public Book() {}
 		public Book(String title, String author, String company, int price) {
 			this.title = title;
@@ -34,7 +36,7 @@ public class Book {
 		}
 		// 메소드 (매개의 값을 담을) / 타이틀이라는 메소드를 값으로 반환
 		public String showList() {
-			return title + " " + author + " " + price;
+			return bookCode + " " + title + " " + author + " " + price;
 		}
 		public String showListWithNo() {
 			return orderNo + " " + title + " " + author + " " + price;
@@ -73,5 +75,11 @@ public class Book {
 		}
 		public void setOrderNo(int orderNo) {
 			this.orderNo = orderNo;
+		}
+		public String getBookCode() {
+			return bookCode;
+		}
+		public void setBookCode(String bookCode) {
+			this.bookCode = bookCode;
 		}
 }
